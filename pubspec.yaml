@@ -1,0 +1,45 @@
+name: haram_blur1
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '^3.7.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # أيقونات لأنظمة iOS
+  cupertino_icons: ^1.0.8
+
+  # مكتبة TFLite لتشغيل نماذج الذكاء الاصطناعي على الجهاز
+  tflite:
+    path: lib_packages/tflite
+
+  # تشغيل المهام في الخلفية (مثل تشغيل الخدمة طوال الوقت)
+  flutter_foreground_task: ^6.1.1
+
+  # للحصول على المسارات المحلية لحفظ/قراءة ملفات (مثلاً حفظ لقطات)
+  path_provider: ^2.1.2
+
+  # لفتح الملفات أو الصور مباشرة من المسار (اختياري لاحقًا)
+  open_file: ^3.3.2
+
+  # لإدارة الأذونات (مهم للوصول للكاميرا/التخزين/الخدمة)
+  permission_handler: ^11.3.1
+
+  # عرض رسائل قصيرة مؤقتة (مثل "تم التفعيل بنجاح")
+  fluttertoast: ^8.2.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/model/model_unquant.tflite
+    - assets/model/labels.txt
